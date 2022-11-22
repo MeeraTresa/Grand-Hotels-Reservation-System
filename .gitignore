@@ -1,0 +1,5 @@
+/node_modules
+/package-lock.json
+/.idea/Grand-Hotels-Reservation-System.iml
+/.idea/vcs.xml
+/client/package-lock.json
