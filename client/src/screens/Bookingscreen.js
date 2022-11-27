@@ -121,7 +121,7 @@ function Bookingscreen({ match }) {
 
         try {
             setloading(true);
-            const data = await (await axios.post("/api/rooms/getroombyid", {roomid})).data;
+            const data = await (await axios.post("http://54.193.57.230:5000/api/rooms/getroombyid", {roomid})).data;
             console.log(data);
             setroom(data);
             setloading(false);
@@ -170,7 +170,7 @@ function Bookingscreen({ match }) {
 
             var retrievedData = JSON.parse(localStorage.getItem('currentUser'));
             console.log(retrievedData.email)
-            const req = await axios.post('/api/users/rewards', {email: retrievedData.email});
+            const req = await axios.post('http://54.193.57.230:5000/api/users/rewards', {email: retrievedData.email});
             var reqdata = req.data;
             console.log(reqdata[0].rewards);
             setRewards(reqdata[0].rewards);
@@ -203,7 +203,7 @@ function Bookingscreen({ match }) {
             console.log(retrievedData.email)
 
             
-            const req = await axios.post('/api/users/rewards', { email: retrievedData.email });
+            const req = await axios.post('http://54.193.57.230:5000/api/users/rewards', { email: retrievedData.email });
 
             var reqdata = req.data;
             
@@ -213,11 +213,11 @@ function Bookingscreen({ match }) {
 
             if(checked === true){
                 //reqdata2 = reqdata2 - 100;
-                axios.put('/api/users/reducereward',{email:reqdata[0].email,reward: reqdata2});
+                axios.put('http://54.193.57.230:5000/api/users/reducereward',{email:reqdata[0].email,reward: reqdata2});
                 
             }
             else{
-                const req2 = axios.put('/api/users/updatereward',{email:reqdata[0].email,reward: reqdata2});
+                const req2 = axios.put('http://54.193.57.230:5000/api/users/updatereward',{email:reqdata[0].email,reward: reqdata2});
             
         }
           }
@@ -225,7 +225,7 @@ function Bookingscreen({ match }) {
 
         try {
             setloading(true);
-            const result = await axios.post('/api/bookings/bookroom', bookingDetails)
+            const result = await axios.post('http://54.193.57.230:5000/api/bookings/bookroom', bookingDetails)
             updateData();
             setloading(false)
             Swal.fire('Congrats', 'Your Room has booked successfully', 'success').then(result => {
@@ -248,7 +248,7 @@ function Bookingscreen({ match }) {
         console.log(checked);
 
         var retrievedData = JSON.parse(localStorage.getItem('currentUser'));
-        const req = axios.post('/api/users/rewards', { email: retrievedData.email });
+        const req = axios.post('http://54.193.57.230:5000/api/users/rewards', { email: retrievedData.email });
         var reqdata = req.data;
         
         console.log(reqdata[0].rewards);

@@ -14,7 +14,7 @@ function Navbar() {
       async function fetchData() {
         var retrievedData = JSON.parse(localStorage.getItem('currentUser'));
         console.log(retrievedData.email)
-        const req = await axios.post('/api/users/rewards',{email:retrievedData.email});
+        const req = await axios.post('http://54.193.57.230:5000/api/users/rewards',{email:retrievedData.email});
         var reqdata = req.data;
         console.log(reqdata[0].rewards);
         setRewards(reqdata[0].rewards);

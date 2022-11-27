@@ -13,7 +13,7 @@ function Rooms() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("/api/rooms/getallrooms")
+        await axios.get("http://54.193.57.230:5000/api/rooms/getallrooms")
       ).data;
       setrooms(data);
       setloading(false);
