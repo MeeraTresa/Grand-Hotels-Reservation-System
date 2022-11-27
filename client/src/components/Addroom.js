@@ -18,7 +18,7 @@ function Addroom() {
           rentperday, maxcount ,description ,phonenumber ,type ,image1 ,image2 ,image3
       }
       try {
-          const result = await axios.post('http://54.193.57.230:5000/api/rooms/addroom' , roomobj)
+          const result = await axios.post('http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/rooms/addroom' , roomobj)
       } catch (error) {
           
       }

@@ -28,7 +28,7 @@ export default function Registerscreen() {
           
           try {
             setloading(true)
-            const result = await axios.post('http://54.193.57.230:5000/api/users/register',user)
+            const result = await axios.post('http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/users/register',user)
             setloading(false)
             setsuccess(true)
             setemail('')

@@ -43,7 +43,7 @@ export const MyOrders = () => {
     try {
       setloading(true);
       const data = await (
-        await axios.post("http://54.193.57.230:5000/api/bookings/getuserbookings", {
+        await axios.post("http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/bookings/getuserbookings", {
           userid: JSON.parse(localStorage.getItem("currentUser"))._id,
         })
       ).data;

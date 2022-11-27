@@ -31,7 +31,7 @@ export default function Loginscreen() {
     }
       try {
         setloading(true)
-        const result = await (await axios.post('http://54.193.57.230:5000/api/users/login',user)).data
+        const result = await (await axios.post('http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/users/login',user)).data
         localStorage.setItem('currentUser',JSON.stringify(result))
         window.location.href='/'
       } catch (error) {
