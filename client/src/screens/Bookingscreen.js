@@ -225,7 +225,7 @@ function Bookingscreen({ match }) {
 
         try {
             setloading(true);
-            const result = await axios.post('http://54.193.57.230:5000/api/bookings/bookroom', bookingDetails)
+            const result = await axios.post('http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/bookings/bookroom', bookingDetails)
             updateData();
             setloading(false)
             Swal.fire('Congrats', 'Your Room has booked successfully', 'success').then(result => {
@@ -248,7 +248,7 @@ function Bookingscreen({ match }) {
         console.log(checked);
 
         var retrievedData = JSON.parse(localStorage.getItem('currentUser'));
-        const req = axios.post('http://54.193.57.230:5000/api/users/rewards', { email: retrievedData.email });
+        const req = axios.post('http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/users/rewards', { email: retrievedData.email });
         var reqdata = req.data;
         
         console.log(reqdata[0].rewards);

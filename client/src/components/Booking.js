@@ -13,7 +13,7 @@ function Bookings() {
     try {
       setloading(true);
       const data = await (
-        await axios.get("http://54.193.57.230:5000/api/bookings/getallbookings")
+        await axios.get("http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/bookings/getallbookings")
       ).data;
       setbookings(data);
       setloading(false);

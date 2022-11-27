@@ -60,7 +60,7 @@ export const MyOrders = () => {
 
     try {
       setloading(true);
-      const result = await axios.post('http://54.193.57.230:5000/api/bookings/cancelbooking', { bookingid: bookingid, userid: user._id, roomid: roomid });
+      const result = await axios.post('http://LB-23492172.us-west-1.elb.amazonaws.com:5000/api/bookings/cancelbooking', { bookingid: bookingid, userid: user._id, roomid: roomid });
       setloading(false);
       Swal.fire('Congrats', 'Your Room has cancelled succeessfully', 'success').then(result => {
         window.location.href = '/profile'
