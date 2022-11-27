@@ -2,6 +2,8 @@ const express = require('express')
 const app = express()
 const db = require('./db')
 app.use(express.json())
+const cors = require('cors');
+app.use(cors());
 const path = require('path')
 const roomsRoutes = require('./routes/roomsRoute')
 const userRoute = require('./routes/userRoute')
