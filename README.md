@@ -1,5 +1,9 @@
 # Grand-Hotels-Reservation-System
 
+## Team Members 
+1. Nikhil konduru
+2. Meera Tresa sebasitian
+
 
 ### User Page
 
